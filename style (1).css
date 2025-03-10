@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(163, 37, 37);
+}
+
+#orb-one {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 247, 0, 0.498);
+    border-radius: 50%;
+    animation-name: shapeshift;
+    animation-duration: 5s;
+    animation-delay:0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes shapeshift {
+    0%{
+border-radius: 45% 65% 55% 75%;
+    }
+    50%{
+border-radius: 55% 75% 35% 45%;
+    }
+    100%{
+border-radius: 50% 60% 30% 70%; 
+    }
+}
+
+#orb-two {
+    width: 90%;
+    height: 90vh;
+    background-color: rgba(0, 255, 255, 0.442);
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left:5%;
+    z-index: 99;
+    animation-name: shapeshift;
+    animation-duration: 10s;
+    animation-delay:0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* 3 properties for centering the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 20px;
+    color: white;
+
+}
+
+@media screen and (max-width:1100px) {
+    body {
+        background-color: pink;
+        animation-duration: 2s;
+    }
+    #orb-one {
+        background-color: rgba(223, 237, 155, 0.525);
+    }
+    #orb-two {
+        background-color: rgba(66, 96, 227, 0.476);
+        animation-duration: 15s;
+
+    }
+    #cupcake{
+        width: 30%;
+        height: 30vh;
+        background-image: url(cupcake-images/cupcake1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position:absolute;
+        z-index: 100;
+        top: 25%;
+        left:20vh;
+    }
+}
+
+@media screen and (max-width:800px) {
+    body{
+        background-color: chocolate;
+    }
+    #orb-one{
+        background-color: rgba(127, 255, 212, 0.421);
+    }
+    #orb-two{
+        background-color: rgba(165, 42, 128, 0.464);
+    }
+
+    #cupcake2{
+        width: 40%;
+        height: 40vh;
+        background-image: url(cupcake-images/cupcake2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position:absolute;
+        z-index: 101;
+        bottom: 25%;
+        right:20vh;
+    }
+}
